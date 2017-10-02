@@ -1,11 +1,79 @@
 #!/usr/bin/env bash
 
+die ( ) {
+    echo
+    echo "${bold}${red} $* ${reset}"
+    echo
+    exit 1
+}
+
+ensure ( ) {
+    command -v $1 >/dev/null 2>&1 || die "ERROR: '$1' could be found in your PATH. Please install $1. $2"
+}
+
 # Requires kotlin version 1.1.3+
+ensure kotlin 'https://kotlinlang.org/'
+
+# Load up arguments
+#source args
 
 # Step 1: Generate Stubs
+# kotlinc \
+# -no-reflect \
+# -no-stdlib \
+# -no-jdk \
+# -verbose \
+# -classpath $CLASSPATH \
+# -d $OUTPUT \
+# -Xbuild-file=$BUILD_FILE \
+# -module-name app_debug \
+# -Xadd-compiler-builtins \
+# -Xload-builtins-from-dependencies \
+# -P plugin:org.jetbrains.kotlin.kapt3:aptMode=stubs,\
+# $AP_CLASSPATH,\
+# plugin:org.jetbrains.kotlin.kapt3:sources=$SOURCES,\
+# plugin:org.jetbrains.kotlin.kapt3:classes=$CLASSES,\
+# plugin:org.jetbrains.kotlin.kapt3:incrementalData=$INCREMENTAL_DATA,\
+# plugin:org.jetbrains.kotlin.kapt3:stubs=$STUBS,\
+# plugin:org.jetbrains.kotlin.kapt3:apoptions=$AP_OPTIONS,\
+# plugin:org.jetbrains.kotlin.kapt3:javacArguments=$JAVAC_ARGUMENTS,\
+# plugin:org.jetbrains.kotlin.kapt3:useLightAnalysis=true,\
+# plugin:org.jetbrains.kotlin.kapt3:correctErrorTypes=false,\
+# plugin:org.jetbrains.kotlin.kapt3:verbose=true \
+# -Xplugin=$ANNOTATION_PROCESSOR
 
 # Step 2: Run kapt
+# kotlinc \
+# -no-reflect \
+# -no-stdlib \
+# -no-jdk \
+# -verbose \
+# -classpath $CLASSPATH \
+# -d $OUTPUT \
+# -Xbuild-file=$BUILD_FILE \
+# -module-name app_debug \
+# -Xadd-compiler-builtins \
+# -Xload-builtins-from-dependencies \
+# -P plugin:org.jetbrains.kotlin.kapt3:aptMode=apt,\
+# $AP_CLASSPATH,\
+# plugin:org.jetbrains.kotlin.kapt3:sources=$SOURCES,\
+# plugin:org.jetbrains.kotlin.kapt3:classes=$CLASSES,\
+# plugin:org.jetbrains.kotlin.kapt3:incrementalData=$INCREMENTAL_DATA,\
+# plugin:org.jetbrains.kotlin.kapt3:stubs=$STUBS,\
+# plugin:org.jetbrains.kotlin.kapt3:apoptions=$AP_OPTIONS,\
+# plugin:org.jetbrains.kotlin.kapt3:javacArguments=$JAVAC_ARGUMENTS,\
+# plugin:org.jetbrains.kotlin.kapt3:useLightAnalysis=true,\
+# plugin:org.jetbrains.kotlin.kapt3:correctErrorTypes=false,\
+# plugin:org.jetbrains.kotlin.kapt3:verbose=true \
+# -Xplugin=$ANNOTATION_PROCESSOR
 
 # Step 3: Invoke kotlinc normally
+# kotlinc \
+# -no-reflect \
+# -no-stdlib \
+# -no-jdk \
+# -verbose \
+# -classpath $CLASSPATH \
+# -d $OUTPUT \
 
 # Step 4: Invoke javac
