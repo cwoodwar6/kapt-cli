@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+KOTLIN_HOME=""
+CLASSPATH=""
+OUTPUT="build/output"
+BUILD_FILE=""
+MODULE_NAME="app_debug"
+CLASSES="build/classes"
+SOURCES="build/sources"
+STUBS="build/stubs"
+INCREMENTAL_DATA="build/incremental"
+ANNOTATION_PROCESSOR=""
+AP_OPTIONS=""
+JAVAC_ARGUMENTS=""
+AP_CLASSPATH=""

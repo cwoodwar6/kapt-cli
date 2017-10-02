@@ -15,32 +15,32 @@ ensure ( ) {
 ensure kotlin 'https://kotlinlang.org/'
 
 # Load up arguments
-#source args
+source args
 
 # Step 1: Generate Stubs
-# kotlinc \
-# -no-reflect \
-# -no-stdlib \
-# -no-jdk \
-# -verbose \
-# -classpath $CLASSPATH \
-# -d $OUTPUT \
-# -Xbuild-file=$BUILD_FILE \
-# -module-name app_debug \
-# -Xadd-compiler-builtins \
-# -Xload-builtins-from-dependencies \
-# -P plugin:org.jetbrains.kotlin.kapt3:aptMode=stubs,\
-# $AP_CLASSPATH,\
-# plugin:org.jetbrains.kotlin.kapt3:sources=$SOURCES,\
-# plugin:org.jetbrains.kotlin.kapt3:classes=$CLASSES,\
-# plugin:org.jetbrains.kotlin.kapt3:incrementalData=$INCREMENTAL_DATA,\
-# plugin:org.jetbrains.kotlin.kapt3:stubs=$STUBS,\
-# plugin:org.jetbrains.kotlin.kapt3:apoptions=$AP_OPTIONS,\
-# plugin:org.jetbrains.kotlin.kapt3:javacArguments=$JAVAC_ARGUMENTS,\
-# plugin:org.jetbrains.kotlin.kapt3:useLightAnalysis=true,\
-# plugin:org.jetbrains.kotlin.kapt3:correctErrorTypes=false,\
-# plugin:org.jetbrains.kotlin.kapt3:verbose=true \
-# -Xplugin=$ANNOTATION_PROCESSOR
+kotlinc \
+-no-reflect \
+-no-stdlib \
+-no-jdk \
+-verbose \
+-classpath $CLASSPATH \
+-d $OUTPUT \
+-Xbuild-file=$BUILD_FILE \
+-module-name $MODULE_NAME \
+-Xadd-compiler-builtins \
+-Xload-builtins-from-dependencies \
+-P plugin:org.jetbrains.kotlin.kapt3:aptMode=stubs,\
+$AP_CLASSPATH,\
+plugin:org.jetbrains.kotlin.kapt3:sources=$SOURCES,\
+plugin:org.jetbrains.kotlin.kapt3:classes=$CLASSES,\
+plugin:org.jetbrains.kotlin.kapt3:incrementalData=$INCREMENTAL_DATA,\
+plugin:org.jetbrains.kotlin.kapt3:stubs=$STUBS,\
+plugin:org.jetbrains.kotlin.kapt3:apoptions=$AP_OPTIONS,\
+plugin:org.jetbrains.kotlin.kapt3:javacArguments=$JAVAC_ARGUMENTS,\
+plugin:org.jetbrains.kotlin.kapt3:useLightAnalysis=true,\
+plugin:org.jetbrains.kotlin.kapt3:correctErrorTypes=false,\
+plugin:org.jetbrains.kotlin.kapt3:verbose=true \
+-Xplugin=$ANNOTATION_PROCESSOR
 
 # Step 2: Run kapt
 # kotlinc \
@@ -77,3 +77,7 @@ ensure kotlin 'https://kotlinlang.org/'
 # -d $OUTPUT \
 
 # Step 4: Invoke javac
+# javac \
+# -source 7 \
+# -target 7 \
+# -sourcepath  \
