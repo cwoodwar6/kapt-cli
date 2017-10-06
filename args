@@ -3,7 +3,7 @@
 KOTLIN_HOME=""
 CLASSPATH=""
 OUTPUT="build/output"
-BUILD_FILE=""
+BUILD_FILE="module-template.xml"
 MODULE_NAME="app_debug"
 CLASSES="build/classes"
 SOURCES="build/sources"

@@ -1,0 +1,11 @@
+<modules>
+    <!-- Module script for production -->
+    <module name="app_debug" type="java-production" outputDir="build/output">
+        <sources path="KOTLIN_SOURCE_FILE"/>
+        <!-- Java source roots -->
+        <javaSourceRoots path="JAVA_SOURCE_ROOT"/>
+        <!-- Classpath -->
+		<classpath path="CLASSPATH_ENTRY"/>
+    </module>
+</modules>
+
