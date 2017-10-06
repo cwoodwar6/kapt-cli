@@ -13,5 +13,7 @@ Kotlin 1.1.3+
 
 ### References
 https://kotlinlang.org/docs/reference/kapt.html
+
 https://stackoverflow.com/questions/45217399/how-to-use-kapt-from-command-line-with-kotlinc
+
 https://github.com/facebook/buck/issues/956
