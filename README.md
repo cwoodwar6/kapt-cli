@@ -17,3 +17,5 @@ https://kotlinlang.org/docs/reference/kapt.html
 https://stackoverflow.com/questions/45217399/how-to-use-kapt-from-command-line-with-kotlinc
 
 https://github.com/facebook/buck/issues/956
+
+https://github.com/JetBrains/kotlin-web-site/blob/ee466cc3109fc932286e23d4f7b43da2eb6b4dff/pages/docs/reference/kapt.md#using-in-cli
