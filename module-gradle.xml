@@ -1,0 +1,21 @@
+<modules>
+    <!-- Module script for production -->
+    <module name="app_debug" type="java-production" outputDir="/Users/cwoodward/Development/kotlin-dagger-example/app/build/tmp/kotlin-classes/debug">
+        <sources path="/Users/cwoodward/Development/kotlin-dagger-example/app/src/main/java/org/loop/example/AndroidModule.kt"/>
+        <sources path="/Users/cwoodward/Development/kotlin-dagger-example/app/src/main/java/org/loop/example/ApplicationComponent.kt"/>
+        <sources path="/Users/cwoodward/Development/kotlin-dagger-example/app/src/main/java/org/loop/example/ForApplication.kt"/>
+        <sources path="/Users/cwoodward/Development/kotlin-dagger-example/app/src/main/java/org/loop/example/MainActivity.kt"/>
+        <sources path="/Users/cwoodward/Development/kotlin-dagger-example/app/src/main/java/org/loop/example/MyApplication.kt"/>
+        <!-- Java source roots -->
+        <javaSourceRoots path="/Users/cwoodward/Development/kotlin-dagger-example/app/build/generated/source/buildConfig/debug"/>
+        <javaSourceRoots path="/Users/cwoodward/Development/kotlin-dagger-example/app/build/generated/source/r/debug"/>
+        <javaSourceRoots path="/Users/cwoodward/Development/kotlin-dagger-example/app/build/generated/source/kapt/debug"/>
+        <!-- Classpath -->
+        <classpath path="/Users/cwoodward/Downloads/kotlinc/lib/kotlin-stdlib.jar"/>
+        <classpath path="/Users/cwoodward/Downloads/kotlinc/lib/annotations-13.0.jar"/>
+        <classpath path="/Users/cwoodward/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger/2.11/95037eaee68aa48021511972e9db9ba29916e1c9/dagger-2.11.jar"/>
+        <classpath path="/Users/cwoodward/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"/>
+        <classpath path="/Users/cwoodward/Library/Android/sdk/platforms/android-25/android.jar"/>
+    </module>
+</modules>
+

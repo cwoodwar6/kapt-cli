@@ -1,0 +1,23 @@
+<modules>
+    <!-- Module script for production -->
+    <module name="app_debug" type="java-production" outputDir="/Users/cwoodward/Development/kapt-cli/build/output">
+        <sources path="/Users/cwoodward/Development/kotlin-dagger-example/app/src/main/java/org/loop/example/AndroidModule.kt"/>
+        <sources path="/Users/cwoodward/Development/kotlin-dagger-example/app/src/main/java/org/loop/example/ApplicationComponent.kt"/>
+        <sources path="/Users/cwoodward/Development/kotlin-dagger-example/app/src/main/java/org/loop/example/ForApplication.kt"/>
+        <sources path="/Users/cwoodward/Development/kotlin-dagger-example/app/src/main/java/org/loop/example/MainActivity.kt"/>
+        <sources path="/Users/cwoodward/Development/kotlin-dagger-example/app/src/main/java/org/loop/example/MyApplication.kt"/>
+        <!-- Java source roots -->
+        <javaSourceRoots path="/Users/cwoodward/Development/kotlin-dagger-example/app/build/generated/source/buildConfig/debug"/>
+        <javaSourceRoots path="/Users/cwoodward/Development/kotlin-dagger-example/app/build/generated/source/r/debug"/>
+        <javaSourceRoots path="/Users/cwoodward/Development/kapt-cli/build/sources"/>
+        <!-- Classpath -->
+		<classpath path="/Users/cwoodward/Development/kotlin-dagger-example/buck-out/gen/.okbuck/cache/__com.google.dagger.dagger-2.11.jar__/com.google.dagger.dagger-2.11.jar"/>
+		<classpath path="/Users/cwoodward/Development/kotlin-dagger-example/buck-out/gen/.okbuck/cache/__javax.inject.javax.inject-1.jar__/javax.inject.javax.inject-1.jar"/>
+		<classpath path="/Users/cwoodward/Development/kotlin-dagger-example/buck-out/gen/.okbuck/cache/__org.jetbrains.annotations-13.0.jar__/org.jetbrains.annotations-13.0.jar"/>
+		<classpath path="/Users/cwoodward/Development/kotlin-dagger-example/buck-out/gen/.okbuck/cache/__org.jetbrains.kotlin.kotlin-stdlib-1.1.50.jar__/org.jetbrains.kotlin.kotlin-stdlib-1.1.50.jar"/>
+		<classpath path="/Users/cwoodward/Development/kotlin-dagger-example/buck-out/gen/app/__src_debug#dummy_r_dot_java_dummyrdotjava_output__/src_debug#dummy_r_dot_java.jar"/>
+		<classpath path="/Users/cwoodward/Library/Android/sdk/platforms/android-24/android.jar"/>
+		<classpath path="/Users/cwoodward/Library/Android/sdk/platforms/android-24/optional/org.apache.http.legacy.jar"/>
+    </module>
+</modules>
+
